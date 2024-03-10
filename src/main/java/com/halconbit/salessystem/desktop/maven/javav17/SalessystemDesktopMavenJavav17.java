@@ -8,6 +8,6 @@ import com.halconbit.salessystem.desktop.maven.javav17.access.Access;
 public class SalessystemDesktopMavenJavav17 {
 
     public static void main(String[] args) {
-        Access.loadFile("customer.txt");
+        Access.loadFile("test.txt");
     }
 }
