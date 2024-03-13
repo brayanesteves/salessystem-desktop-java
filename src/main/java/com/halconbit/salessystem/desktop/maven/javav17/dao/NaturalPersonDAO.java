@@ -130,6 +130,15 @@ public class NaturalPersonDAO implements MethodsDAO<NaturalPerson> {
         }
         return -1;
     }
+    
+    public int findIdentificationDocument(String identificationDocument) {
+        for(int i = 0; i < this.methods.count(); i++) {
+            if(identificationDocument.equals(this.methods.getData(i).getIdntfctnDcmnt())) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
     @Override
     public NaturalPerson getObject(int reference) {
@@ -142,5 +151,6 @@ public class NaturalPersonDAO implements MethodsDAO<NaturalPerson> {
         }
         return naturalPerson;
     }
+    
     
 }
