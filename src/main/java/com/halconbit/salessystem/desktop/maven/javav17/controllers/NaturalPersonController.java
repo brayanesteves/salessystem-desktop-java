@@ -62,7 +62,7 @@ public class NaturalPersonController {
             this.naturalPerson.setDtAdmss(DtAdmss);
             this.naturalPerson.setChckTm(ChckTm);
 
-            if (this.naturalPersonDAO.insert(naturalPerson)) {
+            if (this.naturalPersonDAO.insert(this.naturalPerson)) {
                 return "OK";
             } else {
                 return "ERROR to register.";
@@ -86,7 +86,7 @@ public class NaturalPersonController {
         this.naturalPerson.setDtAdmss(DtAdmss);
         this.naturalPerson.setChckTm(ChckTm);
 
-        if (this.naturalPersonDAO.update(naturalPerson)) {
+        if (this.naturalPersonDAO.update(this.naturalPerson)) {
             return "OK";
         } else {
             return "ERROR to update.";
